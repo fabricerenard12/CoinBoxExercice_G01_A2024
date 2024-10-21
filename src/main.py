@@ -5,7 +5,7 @@ from InquirerPy.separator import Separator
 from CCoinBox import CCoinBox
 f = pyfiglet.Figlet(font='slant')
 print(f.renderText("CCoinBox"))
-
+print("RAWWWRRRRR")
 
 
 def main():
