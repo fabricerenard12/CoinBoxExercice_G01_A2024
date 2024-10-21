@@ -31,8 +31,7 @@ jobs:
       # Exécuter les tests avec couverture
       - name: Run tests and generate coverage report
         run: |
-          pip install coverage
-          coverage run -m unittest discover
+          coverage run -m unittest
           coverage html
 
       # Sauvegarder le rapport de couverture HTML comme artefact
