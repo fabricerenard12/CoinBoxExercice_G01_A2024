@@ -26,12 +26,13 @@ jobs:
       # Installer les dépendances
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r ./requirements.txt
 
       # Exécuter les tests avec couverture
       - name: Run tests and generate coverage report
         run: |
-          coverage run
+          coverage run -m unittest discover -s ./src
+          coverage report
           coverage html
 
       # Sauvegarder le rapport de couverture HTML comme artefact
@@ -39,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: coverage-report
-          path: htmlcov
+          path: htmlcov/**
