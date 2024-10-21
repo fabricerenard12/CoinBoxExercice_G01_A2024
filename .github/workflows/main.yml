@@ -31,7 +31,7 @@ jobs:
       # Exécuter les tests avec couverture
       - name: Run tests and generate coverage report
         run: |
-          coverage run -m unittest
+          coverage run
           coverage html
 
       # Sauvegarder le rapport de couverture HTML comme artefact
